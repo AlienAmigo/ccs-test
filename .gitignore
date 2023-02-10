@@ -12,6 +12,11 @@
 /build
 
 # misc
+/.idea
+/.vscode
+/_data
+/_design
+
 .DS_Store
 .env.local
 .env.development.local
