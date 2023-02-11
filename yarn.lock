@@ -2470,7 +2470,7 @@
   "resolved" "https://registry.npmjs.org/@typescript-eslint/types/-/types-5.51.0.tgz"
   "version" "5.51.0"
 
-"@typescript-eslint/typescript-estree@5.51.0":
+"@typescript-eslint/typescript-estree@^5.47.0", "@typescript-eslint/typescript-estree@5.51.0":
   "integrity" "sha512-TSkNupHvNRkoH9FMA3w7TazVFcBPveAAmb7Sz+kArY6sLT86PA5Vx80cKlYmd8m3Ha2SwofM1KwraF24lM9FvA=="
   "resolved" "https://registry.npmjs.org/@typescript-eslint/typescript-estree/-/typescript-estree-5.51.0.tgz"
   "version" "5.51.0"
@@ -4806,6 +4806,11 @@
   "integrity" "sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg=="
   "resolved" "https://registry.npmjs.org/estree-walker/-/estree-walker-1.0.1.tgz"
   "version" "1.0.1"
+
+"estree-walker@^2.0.2":
+  "integrity" "sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w=="
+  "resolved" "https://registry.npmjs.org/estree-walker/-/estree-walker-2.0.2.tgz"
+  "version" "2.0.2"
 
 "esutils@^2.0.2":
   "integrity" "sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g=="
@@ -8185,6 +8190,14 @@
     "indexes-of" "^1.0.1"
     "uniq" "^1.0.1"
 
+"postcss-styled-syntax@^0.3.1":
+  "integrity" "sha512-DmZ/IxBqBVRLWMPu2VPCGKc8AkV0dAqQ3VdxDlWckQVzMSxzZW3Y+5vqpSgTo2eQqa+6eBX85rdsrWyrAXhUoQ=="
+  "resolved" "https://registry.npmjs.org/postcss-styled-syntax/-/postcss-styled-syntax-0.3.1.tgz"
+  "version" "0.3.1"
+  dependencies:
+    "@typescript-eslint/typescript-estree" "^5.47.0"
+    "estree-walker" "^2.0.2"
+
 "postcss-svgo@^5.1.0":
   "integrity" "sha512-D75KsH1zm5ZrHyxPakAxJWtkyXew5qwS70v56exwvw542d9CRtTo78K0WeFxZB4G7JXKKMbEZtZayTGdIky/eA=="
   "resolved" "https://registry.npmjs.org/postcss-svgo/-/postcss-svgo-5.1.0.tgz"
@@ -9528,6 +9541,11 @@
   dependencies:
     "browserslist" "^4.21.4"
     "postcss-selector-parser" "^6.0.4"
+
+"stylelint-config-recommended@^10.0.1":
+  "integrity" "sha512-TQ4xQ48tW4QSlODcti7pgSRqBZcUaBzuh0jPpfiMhwJKBPkqzTIAU+IrSWL/7BgXlOM90DjB7YaNgFpx8QWhuA=="
+  "resolved" "https://registry.npmjs.org/stylelint-config-recommended/-/stylelint-config-recommended-10.0.1.tgz"
+  "version" "10.0.1"
 
 "stylelint-config-styled-components@^0.1.1":
   "integrity" "sha512-z5Xz/9GmvxO6e/DLzBMwkB85zHxEEjN6K7Cj80Bi+o/9vR9eS3GX3E9VuMnX9WLFYulqbqLtTapGGY28JBiy9Q=="

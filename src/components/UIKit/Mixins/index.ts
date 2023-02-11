@@ -1,5 +1,4 @@
 import { css } from 'styled-components';
-import { COLORS, SCREEN, FONTS } from 'components/UIKit/Style';
 
 export const MIXINS = {
   // псевдоблок
@@ -10,7 +9,7 @@ export const MIXINS = {
   `,
 
   // защита о текстового переполнения
-  TEXT_OVERFLOW: css`
+  TEXT_OVERFLOW: () => css`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -85,7 +84,7 @@ export const MIXINS = {
     color: string,
     zIndex = -1,
     position = 'relative'
-  ) => `
+  ) => css`
     position: ${position};
 
     /* stylelint-disable-next-line */
@@ -101,6 +100,11 @@ export const MIXINS = {
       background-color: ${color};
       clip-path: ${polygon.toString()};
     }
+  `,
+
+  // стандартная анимация
+  TRANSITION: (property = 'opacity', delay = '0.25s', style = 'ease-in') => css`
+    transition: ${property} ${delay} ${style};
   `,
 
   // анимация на hover
@@ -128,5 +132,19 @@ export const MIXINS = {
         transition: transform 0.25s ease-in;
       }
     }
+  `,
+
+  // Button Basic Style
+  BUTTON_BASIC_STYLE: (fz = '1.375rem', bdrs = '16px') => css`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: ${bdrs};
+    background-color: var(--main-color);
+    font-weight: 700;
+    font-size: ${fz};
+    color: var(--white-color);
+    cursor: pointer;
   `
 };
