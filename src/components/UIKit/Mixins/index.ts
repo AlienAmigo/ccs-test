@@ -149,6 +149,10 @@ export const MIXINS = {
     cursor: pointer;
     ${MIXINS.TRANSITION('background-color')}
 
+    &:visited, &:active {
+      color: var(--white-color);
+    }
+
     &:hover {
       background-color: var(--submain-color);
     }

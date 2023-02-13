@@ -1,11 +1,17 @@
 import React from 'react';
 import Gallery from './components/Gallery';
+import Categories from './components/Categories';
+import Inventory from './components/Inventory';
+import Features from './components/Features';
 import Wrapper from './style';
 
 const Home: React.FC = () => {
   return (
     <Wrapper>
       <Gallery />
+      <Categories />
+      <Inventory />
+      <Features />
     </Wrapper>
   );
 };
