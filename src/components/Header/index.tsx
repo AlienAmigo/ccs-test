@@ -10,17 +10,23 @@ import Wrapper from './style';
 const Header: React.FC = () => {
   return (
     <Wrapper>
-      <NavLink
-        end
-        to={PATH.BASE}
-        className={({ isActive }) => `header__logo${isActive ? ' active' : ''}`}
-      >
-        <img className="header__logo-img" alt="Логотип" src={LogoImg} />
-      </NavLink>
-      <SearchField />
-      <div className="header__main-nav-wrapper">
-        <MainNav />
-        <PhoneLink className="header__phone-link" />
+      <div className="header__wrapper">
+        <NavLink
+          end
+          to={PATH.BASE}
+          className={({ isActive }) =>
+            `header__logo${isActive ? ' active' : ''}`
+          }
+        >
+          <img className="header__logo-img" alt="Логотип" src={LogoImg} />
+        </NavLink>
+
+        <SearchField />
+
+        <div className="header__main-nav-wrapper">
+          <MainNav />
+          <PhoneLink className="header__phone-link" />
+        </div>
       </div>
     </Wrapper>
   );

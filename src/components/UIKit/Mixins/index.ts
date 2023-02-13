@@ -145,6 +145,12 @@ export const MIXINS = {
     font-weight: 700;
     font-size: ${fz};
     color: var(--white-color);
+    outline-color: var(--submain-color);
     cursor: pointer;
+    ${MIXINS.TRANSITION('background-color')}
+
+    &:hover {
+      background-color: var(--submain-color);
+    }
   `
 };

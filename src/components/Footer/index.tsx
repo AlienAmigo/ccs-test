@@ -14,8 +14,8 @@ const Footer = () => {
     <Wrapper>
       <div className="footer__wrapper">
         {LinksBlocks.map(item => (
-          <div className="footer__links-block-wrapper">
-            <LinksBlock key={nanoid()} name={item.name} links={item.links} />
+          <div key={nanoid()} className="footer__links-block-wrapper">
+            <LinksBlock name={item.name} links={item.links} />
           </div>
         ))}
         <FooterSubscribeForm />

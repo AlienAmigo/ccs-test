@@ -5,13 +5,12 @@ import Wrapper from './style';
 
 interface Props {
   name?: string;
-  phone?: string;
   links: {
     title: string;
     href: string;
   }[];
 }
-const LinksBlock: React.FC<Props> = ({ name, phone, links }) => {
+const LinksBlock: React.FC<Props> = ({ name, links }) => {
   return (
     <Wrapper>
       {name && <h5 className="links-block__title">{name}</h5>}
@@ -34,7 +33,6 @@ const LinksBlock: React.FC<Props> = ({ name, phone, links }) => {
 };
 
 LinksBlock.defaultProps = {
-  name: '',
-  phone: ''
+  name: ''
 };
 export default LinksBlock;
