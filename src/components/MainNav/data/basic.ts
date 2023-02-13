@@ -3,27 +3,27 @@ import PATH from 'routes/path';
 const BasicNavList = [
   {
     title: 'Products',
-    path: `${PATH.BASE}${PATH.PRODUCTS}`
+    path: `${PATH.PRODUCTS}`
   },
   {
     title: 'Resources',
-    path: `${PATH.BASE}${PATH.RESOURCES}`
+    path: `${PATH.RESOURCES}`
   },
   {
     title: 'Services',
-    path: `${PATH.BASE}${PATH.SERVICES}`
+    path: `${PATH.SERVICES}`
   },
   {
     title: 'Locations',
-    path: `${PATH.BASE}${PATH.LOCATIONS}`
+    path: `${PATH.LOCATIONS}`
   },
   {
     title: 'Careers',
-    path: `${PATH.BASE}${PATH.CAREERS}`
+    path: `${PATH.CAREERS}`
   },
   {
     title: 'Support',
-    path: `${PATH.BASE}${PATH.SUPPORT}`
+    path: `${PATH.SUPPORT}`
   }
 ];
 

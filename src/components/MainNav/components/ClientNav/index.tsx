@@ -1,7 +1,32 @@
 import React from 'react';
 import PATH from 'routes/path';
-import { NavLink, Link } from 'react-router-dom';
+import { nanoid } from 'nanoid';
+import { NavLink } from 'react-router-dom';
+import ClientNavList from 'components/MainNav/data/client';
+import { ReactComponent as AccountImg } from './assets/account.svg';
+import { ReactComponent as CartImg } from './assets/cart.svg';
+import { ReactComponent as ListsImg } from './assets/lists.svg';
+import { ReactComponent as QuickOrderImg } from './assets/quick-order.svg';
 import Wrapper from './style';
+
+const setIcon = (path: string, modificator?: string) => {
+  const setIconClass = (mod?: string): string =>
+    `client-nav__icon${mod ? ` client-nav__icon--${mod}` : ''}`;
+
+  switch (path) {
+    case PATH.ACCOUNT:
+      return <AccountImg className={setIconClass(modificator)} />;
+    case PATH.LISTS:
+      return <ListsImg className={setIconClass(modificator)} />;
+    case PATH.QUICK_ORDER:
+      return <QuickOrderImg className={setIconClass(modificator)} />;
+    default:
+      return <CartImg className={setIconClass(modificator)} />;
+  }
+};
+
+const setClassModificator = (str: string): string =>
+  str.toLowerCase().replace(/[\s_]/gi, '-').replace(/\//gi, '');
 
 interface Props {
   cartItems?: number;
@@ -11,43 +36,28 @@ const ClientNav: React.FC<Props> = ({ cartItems }) => {
   return (
     <Wrapper>
       <ul className="client-nav__list">
-        <li className="client-nav__item client-nav__item--lists">
-          <NavLink
-            end
-            to={`${PATH.BASE}${PATH.LISTS}`}
-            className="client-nav__link"
+        {ClientNavList.map(item => (
+          <li
+            key={nanoid()}
+            className="client-nav__item client-nav__item--lists"
           >
-            Lists
-          </NavLink>
-        </li>
-        <li className="client-nav__item client-nav__item--account">
-          <NavLink
-            end
-            to={`${PATH.BASE}${PATH.ACCOUNT}`}
-            className="client-nav__link"
-          >
-            Account
-          </NavLink>
-        </li>
-        <li className="client-nav__item client-nav__item--quick-order">
-          <NavLink
-            end
-            to={`${PATH.BASE}${PATH.QUICK_ORDER}`}
-            className="client-nav__link"
-          >
-            Quick Order
-          </NavLink>
-        </li>
-        <li className="client-nav__item client-nav__item--cart">
-          <span className="client-nav__cart-counter">{cartItems}</span>
-          <NavLink
-            to={`${PATH.BASE}${PATH.CART}`}
-            end
-            className="client-nav__link"
-          >
-            Cart
-          </NavLink>
-        </li>
+            <NavLink
+              end
+              to={item.path}
+              className={({ isActive }) =>
+                `client-nav__link client-nav__link--${setClassModificator(
+                  item.title
+                )} ${isActive ? ' active' : ''}`
+              }
+            >
+              {setIcon(item.path, setClassModificator(item.title))}
+              {item.path === `${PATH.CART}` && (
+                <span className="client-nav__cart-counter">{cartItems}</span>
+              )}
+              {item.title}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </Wrapper>
   );

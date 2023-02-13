@@ -31,10 +31,21 @@ const Wrapper = styled.div`
         outline-color: var(--submain-color);
       }
 
-      &:hover,
-      &:active {
+      &:not(.active) {
+        &:visited {
+          color: var(--text-color);
+        }
+
+        &:hover,
+        &:active {
+          border-color: var(--main-color);
+          color: var(--submain-color);
+        }
+      }
+
+      &.active {
         border-color: var(--main-color);
-        color: var(--submain-color);
+        color: var(--main-color);
       }
     }
   }

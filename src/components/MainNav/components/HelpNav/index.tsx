@@ -28,4 +28,3 @@ const HelpNav: React.FC = () => {
 };
 
 export default HelpNav;
-export { PATH };

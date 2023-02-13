@@ -20,7 +20,6 @@ const Wrapper = styled.div`
 
     &__link {
       display: inline-block;
-      padding-bottom: 1px;
       border-bottom: 1px solid var(--submain-color);
       text-decoration: none;
       font-family: var(--inter-font);
@@ -29,14 +28,21 @@ const Wrapper = styled.div`
       ${MIXINS.TRANSITION('color')};
       ${MIXINS.TRANSITION('border-color')};
 
-      &:visited {
-        color: var(--main-color);
+      &:not(.active) {
+        &:visited {
+          color: var(--main-color);
+        }
+
+        &:active,
+        &:hover {
+          border-color: var(--main-color);
+          color: var(--main-color);
+        }
       }
 
-      &:active,
-      &:hover {
+      &.active {
         border-color: var(--main-color);
-        color: var(--main-color);
+        color: var(--submain-color);
       }
     }
   }
