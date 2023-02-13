@@ -1,5 +1,6 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
+import PhoneLink from 'components/PhoneLink';
 import Wrapper from './style';
 
 interface Props {
@@ -26,6 +27,7 @@ const LinksBlock: React.FC<Props> = ({ name, phone, links }) => {
             {item.title}
           </a>
         ))}
+        {name === 'Support' && <PhoneLink place="footer" />}
       </div>
     </Wrapper>
   );

@@ -22,6 +22,7 @@ const Wrapper = styled.div`
 
     &__link,
     &__link:visited {
+      display: flex;
       text-decoration: none;
       font-size: 1rem;
       color: var(--white-color);

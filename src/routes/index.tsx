@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Route, Routes as Switch } from 'react-router-dom';
 import Layout from 'components/Layout';
 import UILoader from 'components/UIKit/UILoader';
+import PATH from './path';
 
 const HomeView = React.lazy(() => import('views/Home'));
 const ProductsView = React.lazy(() => import('views/Products'));
@@ -10,17 +11,8 @@ const LocationsView = React.lazy(() => import('views/Locations'));
 const CareersView = React.lazy(() => import('views/Careers'));
 const SupportView = React.lazy(() => import('views/Support'));
 
-export enum PATH {
-  BASE = '/',
-  PRODUCTS = 'products',
-  LOCATIONS = 'locations',
-  SERVICES = 'services',
-  CAREERS = 'careers',
-  SUPPORT = 'support'
-}
-
 const routes = (
-  <Suspense fallback={<UILoader />}>
+  <Suspense fallback={<UILoader role="main" />}>
     <Switch>
       <Route path={PATH.BASE} element={<Layout />}>
         <Route index element={<HomeView />} />
@@ -29,6 +21,7 @@ const routes = (
         <Route path={PATH.SERVICES} element={<ServicesView />} />
         <Route path={PATH.CAREERS} element={<CareersView />} />
         <Route path={PATH.SUPPORT} element={<SupportView />} />
+        <Route path="*" element={<>Упс...</>} />
       </Route>
     </Switch>
   </Suspense>

@@ -69,7 +69,8 @@ const GlobalStyle = createGlobalStyle`
   --z-mobile-menu: 300;
   --z-up-btn: 250;
   --z-menu: 100;
-  --z-modal: 1000
+  --z-modal: 1000;
+  --z-loader: 2500
 }
 
 * {
@@ -98,6 +99,7 @@ const GlobalStyle = createGlobalStyle`
   div#root {
     display: flex;
     flex-direction: column;
+    position: relative;
     min-width: 100vw;
     min-height: 100vh;
   }

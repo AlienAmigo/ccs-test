@@ -68,6 +68,8 @@ const Wrapper = styled.div`
       align-self: stretch;
       width: 147px;
       padding: 16px 0;
+      border: none;
+      outline: 0;
       line-height: 1.1875rem;
     }
   }
