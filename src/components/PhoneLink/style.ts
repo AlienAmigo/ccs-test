@@ -9,6 +9,7 @@ const Wrapper = styled.div<{ place?: string }>`
   right: 5px;
   font-size: 1.375rem;
   line-height: 1.6875rem;
+  outline-color: var(--submain-color);
 
   & .phone-link {
     &__icon {

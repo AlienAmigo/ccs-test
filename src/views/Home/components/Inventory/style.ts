@@ -6,7 +6,6 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   min-height: 682px;
-  margin-bottom: 106px;
   padding: 130px 717px 0 75px;
   border: 1px solid #e2e0df;
   border-radius: 16px;

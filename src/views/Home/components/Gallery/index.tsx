@@ -19,7 +19,7 @@ const Gallery = () => {
         showStatus={false}
         showIndicators
         useKeyboardArrows
-        transitionTime={0}
+        transitionTime={750}
       >
         <GallerySlide ind={0} />
         <GallerySlide ind={2} />

@@ -79,6 +79,12 @@ const Wrapper = styled.div`
       }
 
       &:not(.active) {
+        svg {
+          path {
+            fill: #9b9591;
+          }
+        }
+
         &:hover,
         &:active {
           color: var(--submain-color);
