@@ -1,6 +1,5 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import { nanoid } from 'nanoid';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import GallerySlide from './components/GallerySlide';
 import Wrapper from './style';

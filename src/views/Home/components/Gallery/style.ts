@@ -4,7 +4,7 @@ import { MIXINS } from 'components/UIKit/Mixins';
 const Wrapper = styled.section`
   display: flex;
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 71px;
   border-radius: 16px;
   overflow: hidden;
 

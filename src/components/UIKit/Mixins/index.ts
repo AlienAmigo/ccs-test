@@ -136,25 +136,47 @@ export const MIXINS = {
 
   // Button Basic Style
   BUTTON_BASIC_STYLE: (fz = '1.375rem', bdrs = '16px') => css`
+    @keyframes bgMove {
+      0% {
+        background-position: 0 82%;
+      }
+
+      50% {
+        background-position: 100% 19%;
+      }
+
+      100% {
+        background-position: 0 82%;
+      }
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: ${bdrs};
-    background-color: var(--main-color);
+    background: var(--main-color);
     font-weight: 700;
     font-size: ${fz};
     color: var(--white-color);
     outline-color: var(--submain-color);
     cursor: pointer;
-    ${MIXINS.TRANSITION('background-color')}
 
-    &:visited, &:active {
+    &:visited,
+    &:active {
       color: var(--white-color);
     }
 
     &:hover {
-      background-color: var(--submain-color);
+      background: linear-gradient(
+        90deg,
+        var(--main-color),
+        var(--submain-color),
+        var(--main-color)
+      );
+      background-size: 400% 400%;
+      transition: all 0.35s;
+      animation: bgMove 5s ease infinite;
     }
   `
 };
