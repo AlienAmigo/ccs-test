@@ -10,8 +10,16 @@ const Wrapper = styled.section`
 
   @media screen and (${BREAKPOINTS.SM}) {
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: unset;
     margin: 80px 0;
+  }
+
+  @media screen and (${BREAKPOINTS.XS}) {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: unset;
+    margin: 50px 0;
   }
 `;
 

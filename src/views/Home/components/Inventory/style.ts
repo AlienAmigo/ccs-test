@@ -60,6 +60,35 @@ const Wrapper = styled.section`
       }
     }
   }
+
+  @media screen and (${BREAKPOINTS.XS}) {
+    min-height: max-content;
+    padding: 30px 0 35px 20px;
+    background: url(${bgImg}) no-repeat left 100px center / cover;
+
+    & .inventory {
+      &__title {
+        max-width: 300px;
+        margin: 0 0 25px;
+        font-size: 1.875rem;
+      }
+
+      &__text {
+        max-width: 300px;
+        font-size: 1.2rem;
+        color: var(--text-color);
+      }
+
+      &__btn {
+        ${MIXINS.BUTTON_BASIC_STYLE('1.2rem')};
+        width: 220px;
+        height: 50px;
+        margin-top: 50px;
+        font-size: 1.125rem;
+        text-decoration: none;
+      }
+    }
+  }
 `;
 
 export default Wrapper;
