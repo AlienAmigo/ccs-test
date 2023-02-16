@@ -46,6 +46,15 @@ const Wrapper = styled.section`
       }
     }
   }
+
+  @media screen and (${BREAKPOINTS.XS}) {
+    min-height: 330px;
+    height: max-content;
+
+    .gallery {
+      height: max-content;
+    }
+  }
 `;
 
 export default Wrapper;

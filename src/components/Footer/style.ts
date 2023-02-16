@@ -34,6 +34,7 @@ const Wrapper = styled.footer`
 
   @media screen and (${BREAKPOINTS.SM}) {
     width: calc(var(--screen-sm) - (2 * var(--gap-sm)));
+    max-width: 100vw;
 
     & .footer {
       &__wrapper {
@@ -50,6 +51,46 @@ const Wrapper = styled.footer`
         margin: 1.75em auto 0;
         font-size: 0.875rem;
         line-height: 1.2em;
+      }
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    width: calc(var(--screen-sm) - (2 * var(--gap-sm)));
+    max-width: 100vw;
+
+    & .footer {
+      &__wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      &__links-block-wrapper {
+        order: 2;
+        margin-right: 0;
+      }
+
+      &__copyright {
+        margin: 1.75em auto 0;
+        font-size: 0.875rem;
+        line-height: 1.2em;
+      }
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.XS}) {
+    width: 100%;
+    max-width: 100vw;
+
+    & .footer {
+      &__wrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 25px;
+        width: max-content;
+        margin: 0 auto;
       }
     }
   }

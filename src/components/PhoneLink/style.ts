@@ -58,7 +58,7 @@ const Wrapper = styled.div<{ place?: string }>`
       right: unset;
       margin-top: 9px;
       font-size: 1rem;
-      line-height: 1.1875rem;
+      line-height: 1.1875em;
       color: var(--white-color);
 
       & .phone-link {
@@ -92,6 +92,12 @@ const Wrapper = styled.div<{ place?: string }>`
         height: 18px;
       }
     }
+
+    ${({ place }) =>
+      place === 'footer' &&
+      css`
+        margin-top: 9px;
+      `}
   }
 `;
 

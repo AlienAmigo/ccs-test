@@ -96,17 +96,11 @@ const Wrapper = styled.section`
         min-width: max-content;
         height: 45px;
         padding: 0 28px 0 24px;
-        box-shadow: 0 4px 11px rgba(33, 33, 33, 0.35);
-        text-decoration: none;
 
         svg {
           width: 24px;
           height: 21px;
           margin-left: 15px;
-        }
-
-        &:hover {
-          box-shadow: none;
         }
       }
 
@@ -118,6 +112,18 @@ const Wrapper = styled.section`
           bottom: calc(100% + 13px);
           width: 36px;
           height: 36px;
+        }
+      }
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.XS}) {
+    & .categories {
+      &__carousel {
+        margin: 0;
+
+        .react-multiple-carousel__arrow {
+          display: none;
         }
       }
     }

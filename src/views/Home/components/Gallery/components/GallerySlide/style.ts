@@ -42,7 +42,7 @@ const Wrapper = styled.div`
     &__btn {
       ${MIXINS.BUTTON_BASIC_STYLE()}
       position: absolute;
-      top: 526px;
+      bottom: 526px;
       left: 96px;
       width: 320px;
       height: 65px;
@@ -52,11 +52,12 @@ const Wrapper = styled.div`
 
   @media screen and (${BREAKPOINTS.SM}) {
     height: 380px;
+
     & .gallery-slide {
       &__title {
         top: 50px;
         left: 70px;
-        font-size: 2.5em;
+        font-size: 2.5rem;
       }
 
       &__btn {
@@ -65,6 +66,40 @@ const Wrapper = styled.div`
         width: 280px;
         height: 55px;
         font-size: 1.2rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.XS}) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: max-content;
+    min-height: 330px;
+    padding: 30px 30px 35px;
+
+    & .gallery-slide {
+      &__title {
+        position: relative;
+        top: unset;
+        left: unset;
+        width: 100%;
+        height: max-content;
+        font-size: 2rem;
+      }
+
+      &__btn {
+        position: relative;
+        top: unset;
+        bottom: unset;
+        left: unset;
+        width: 220px;
+        height: 50px;
+        margin: 15px 0 25px;
+        font-size: 1.125rem;
         text-decoration: none;
       }
     }

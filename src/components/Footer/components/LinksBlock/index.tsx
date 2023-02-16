@@ -1,5 +1,6 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
+import { Link } from 'react-router-dom';
 import PhoneLink from 'components/PhoneLink';
 import Wrapper from './style';
 
@@ -16,15 +17,14 @@ const LinksBlock: React.FC<Props> = ({ name, links }) => {
       {name && <h5 className="links-block__title">{name}</h5>}
       <div className="links-block__links-wrapper">
         {links.map(item => (
-          <a
+          <Link
             key={nanoid()}
-            href={item.href}
+            to={item.href}
             rel="noreferrer"
-            target="_blank"
             className="links-block__link"
           >
             {item.title}
-          </a>
+          </Link>
         ))}
         {name === 'Support' && <PhoneLink place="footer" />}
       </div>
