@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.footer`
   display: flex;
@@ -28,6 +29,28 @@ const Wrapper = styled.footer`
       font-size: 1rem;
       line-height: 1.1875rem;
       color: var(--gray-medium-color);
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    width: calc(var(--screen-sm) - (2 * var(--gap-sm)));
+
+    & .footer {
+      &__wrapper {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      &__links-block-wrapper {
+        order: 2;
+        margin-right: 0;
+      }
+
+      &__copyright {
+        margin: 1.75em auto 0;
+        font-size: 0.875rem;
+        line-height: 1.2em;
+      }
     }
   }
 `;
