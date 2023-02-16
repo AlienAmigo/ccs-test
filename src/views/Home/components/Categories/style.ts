@@ -92,7 +92,8 @@ const Wrapper = styled.section`
     & .categories {
       &__live-chat-btn {
         ${MIXINS.BUTTON_BASIC_STYLE('0.875rem', '20px')};
-        min-width: 181px;
+        flex-direction: row;
+        min-width: max-content;
         height: 45px;
         padding: 0 28px 0 24px;
         box-shadow: 0 4px 11px rgba(33, 33, 33, 0.35);

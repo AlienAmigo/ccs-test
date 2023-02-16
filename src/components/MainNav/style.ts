@@ -15,14 +15,13 @@ const Wrapper = styled.nav<{ phoneMenu: boolean }>`
       min-width: 100%;
       min-height: 100%;
     }
-    
+
     &__menu {
       display: flex;
       position: relative;
       min-width: 100%;
       min-height: 100%;
     }
-  }
   }
 
   @media screen and (${BREAKPOINTS.SM}) {
@@ -56,6 +55,7 @@ const Wrapper = styled.nav<{ phoneMenu: boolean }>`
           }
         }
       `}
+  }
 `;
 
 export default Wrapper;
