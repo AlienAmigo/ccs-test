@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.div`
   width: 197px;
@@ -43,6 +44,17 @@ const Wrapper = styled.div`
       font-size: 1rem;
       line-height: 1.1875rem;
       color: inherit;
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    width: 175px;
+    height: 215px;
+
+    & .categories-item {
+      &__img-wrapper {
+        height: 175px;
+      }
     }
   }
 `;

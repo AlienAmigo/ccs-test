@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 import prevImg from './assets/arrow-prev.svg';
 import nextImg from './assets/arrow-next.svg';
 
@@ -57,7 +58,9 @@ const Wrapper = styled.section`
         position: absolute;
         bottom: calc(100% + 13px);
         width: 46px;
+        min-width: inset;
         height: 46px;
+        min-height: unsets;
         border-radius: 50%;
         background-color: var(--gray-light-color);
         background-repeat: no-repeat;
@@ -80,6 +83,40 @@ const Wrapper = styled.section`
         &.react-multiple-carousel__arrow--right {
           left: 230px;
           background-image: url(${nextImg});
+        }
+      }
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    & .categories {
+      &__live-chat-btn {
+        ${MIXINS.BUTTON_BASIC_STYLE('0.875rem', '20px')};
+        min-width: 181px;
+        height: 45px;
+        padding: 0 28px 0 24px;
+        box-shadow: 0 4px 11px rgba(33, 33, 33, 0.35);
+        text-decoration: none;
+
+        svg {
+          width: 24px;
+          height: 21px;
+          margin-left: 15px;
+        }
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+      &__carousel {
+        margin: 0 -5px;
+
+        .react-multiple-carousel__arrow {
+          position: absolute;
+          bottom: calc(100% + 13px);
+          width: 36px;
+          height: 36px;
         }
       }
     }
