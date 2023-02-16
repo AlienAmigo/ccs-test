@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.div`
   display: flex;
-  margin: 21px var(--gap-lg) 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 21px var(--gap-lg) 0 0;
 
   & .client-nav {
     &__list {
@@ -72,6 +76,9 @@ const Wrapper = styled.div`
         color: var(--main-color);
 
         svg {
+          width: auto;
+          height: 100%;
+
           path {
             fill: var(--main-color);
           }
@@ -95,6 +102,33 @@ const Wrapper = styled.div`
             }
           }
         }
+      }
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    order: 2;
+    position: relative;
+    top: unset;
+    right: unset;
+    width: max-content;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+
+    & .client-nav {
+      &__list {
+        gap: 16px;
+      }
+
+      &__icon {
+        height: 24px;
+        margin-right: 6px;
+      }
+
+      &__cart-counter {
+        top: -5px;
+        font-size: 0.6875rem;
       }
     }
   }

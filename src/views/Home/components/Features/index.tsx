@@ -1,6 +1,4 @@
 import React from 'react';
-import PATH from 'routes/path';
-import { NavLink } from 'react-router-dom';
 import { nanoid } from 'nanoid';
 import featuresItemsList from './data';
 import FeaturesItem from './components/FeaturesItem';

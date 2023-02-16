@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 import { MIXINS } from 'components/UIKit/Mixins';
 
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   display: flex;
   position: sticky;
   top: 0;
@@ -50,6 +51,47 @@ const Wrapper = styled.div`
       width: 100%;
       height: 100%;
       padding: var(--gap-lg);
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    & .header {
+      &__wrapper {
+        //flex-direction: column;
+        align-items: flex-start;
+        //justify-content: space-between;
+        justify-content: flex-start;
+        position: relative;
+        width: var(--screen-sm);
+        min-height: 70px;
+        padding: var(--gap-sm);
+      }
+
+      &__logo {
+        position: relative;
+        margin: 0 20px 0 0;
+        width: 85px;
+      }
+
+      &__logo-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+      }
+
+      &__main-nav-wrapper {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: flex-start;
+        position: relative;
+        top: 0;
+        left: unset;
+        min-width: max-content;
+        margin: 5px 0 0 0;
+        padding: 0;
+      }
     }
   }
 `;

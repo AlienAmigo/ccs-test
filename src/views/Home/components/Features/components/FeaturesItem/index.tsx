@@ -1,7 +1,5 @@
 import React from 'react';
-import PATH from 'routes/path';
 import { NavLink } from 'react-router-dom';
-import { nanoid } from 'nanoid';
 import { ReactComponent as ProductsImg } from '../../assets/products.svg';
 import { ReactComponent as SupportImg } from '../../assets/support.svg';
 import { ReactComponent as IdeasImg } from '../../assets/ideas.svg';

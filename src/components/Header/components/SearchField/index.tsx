@@ -5,9 +5,14 @@ const onSubmit = (event: React.SyntheticEvent): void => {
   event.preventDefault();
 };
 
-const SearchField = () => {
+interface Props {
+  className?: string;
+  phoneMenu?: boolean;
+}
+
+const SearchField: React.FC<Props> = ({ className, phoneMenu }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className} phoneMenu={phoneMenu}>
       <form
         id="search-form"
         onSubmit={onSubmit}
@@ -24,6 +29,11 @@ const SearchField = () => {
       </form>
     </Wrapper>
   );
+};
+
+SearchField.defaultProps = {
+  className: '',
+  phoneMenu: false
 };
 
 export default SearchField;

@@ -1,6 +1,29 @@
 import { css } from 'styled-components';
 
 export const MIXINS = {
+  MEDIA: (size = 'desktop', code = css``) => {
+    switch (size) {
+      case 'phone':
+        return css`
+          @media screen and (max-width: 768px) {
+            ${code}
+          }
+        `;
+      case 'tablet':
+        return css`
+          @media screen and (max-width: 1440px) {
+            ${code}
+          }
+        `;
+      default:
+        return css`
+          @media screen and (min-width: 1440px + 1px) {
+            ${code}
+          }
+        `;
+    }
+  },
+
   // псевдоблок
   PSEUDO: (display = 'block', pos = 'absolute', content = '') => css`
     content: '${content}';

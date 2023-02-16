@@ -62,15 +62,17 @@ const GlobalStyle = createGlobalStyle`
   --screen-sm: 768px;
   --screen-lg: 1440px;
   
+  --gap-xs: 24px;
+  --gap-sm: 16px;
   --gap-lg: 24px;
   
 /*   4. z-index */
   
-  --z-mobile-menu: 300;
-  --z-up-btn: 250;
-  --z-menu: 100;
+  --z-mobile-menu: 1200;
+  --z-up-btn: 2500;
+  --z-menu: 1100;
   --z-modal: 1000;
-  --z-loader: 2500
+  --z-loader: 3000;
 }
 
 * {

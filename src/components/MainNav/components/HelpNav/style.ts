@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.div`
   display: flex;
@@ -45,6 +46,16 @@ const Wrapper = styled.div`
         color: var(--submain-color);
       }
     }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    order: 1;
+    position: relative;
+    top: unset;
+    right: unset;
+    width: 100%;
+    height: max-content;
+    margin: 25px 0;
   }
 `;
 

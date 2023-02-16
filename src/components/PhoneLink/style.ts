@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.div<{ place?: string }>`
   display: flex;
@@ -8,7 +9,7 @@ const Wrapper = styled.div<{ place?: string }>`
   bottom: 22px;
   right: 5px;
   font-size: 1.375rem;
-  line-height: 1.6875rem;
+  line-height: 1.6875em;
   outline-color: var(--submain-color);
 
   & .phone-link {
@@ -23,11 +24,12 @@ const Wrapper = styled.div<{ place?: string }>`
     }
 
     &__link {
-      display: inline-block;
+      display: inline-flex;
       margin-top: 2px;
       padding-bottom: 1px;
       border-bottom: 1px solid var(--submain-color);
       text-decoration: none;
+      white-space: nowrap;
       color: var(--main-color);
       ${MIXINS.TRANSITION('color')}
       ${MIXINS.TRANSITION('border-color')}
@@ -73,6 +75,24 @@ const Wrapper = styled.div<{ place?: string }>`
         }
       }
     `}
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    top: unset;
+    bottom: unset;
+    right: unset;
+    margin: 0 auto;
+    font-size: 1rem;
+
+    & .phone-link {
+      &__icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
 `;
 
 export default Wrapper;

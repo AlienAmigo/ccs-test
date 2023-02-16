@@ -1,9 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 import searchImg from './assets/search.svg';
 
-const Wrapper = styled.div`
-  display: flex;
+const Wrapper = styled.div<{ phoneMenu?: boolean }>`
+  display: ${({ phoneMenu }) => (phoneMenu ? 'none' : 'flex')};
   flex-direction: row;
   align-items: center;
   z-index: 2;
@@ -68,6 +69,13 @@ const Wrapper = styled.div`
         var(--transparent-color);
       cursor: pointer;
     }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    display: ${({ phoneMenu }) => (!phoneMenu ? 'none' : 'flex')};
+    margin: 0;
+    width: 300px;
+    height: 40px;
   }
 `;
 
