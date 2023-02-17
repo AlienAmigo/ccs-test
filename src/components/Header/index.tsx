@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import PATH from 'routes/path';
 import MainNav from 'components/MainNav';
@@ -15,8 +15,20 @@ const Header: React.FC = () => {
     setPhoneMenu(!phoneMenu);
   };
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
+  });
+
   return (
-    <Wrapper>
+    <Wrapper scrolled={scrolled}>
       <div className="header__wrapper">
         <NavLink
           end

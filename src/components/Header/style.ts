@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { BREAKPOINTS } from 'components/UIKit/Style';
 import MIXINS from 'components/UIKit/Mixins';
 
-const Wrapper = styled.header`
+const Wrapper = styled.header<{ scrolled?: boolean }>`
   display: flex;
   position: sticky;
   top: 0;
@@ -18,6 +18,13 @@ const Wrapper = styled.header`
       margin: 0 auto;
       padding: var(--gap-lg);
       background-color: var(--white-color);
+      box-shadow: none;
+      ${MIXINS.TRANSITION('box-shadow')}
+      ${({ scrolled }) =>
+        scrolled &&
+        css`
+          box-shadow: 0 12px 8px -6px rgba(34, 60, 80, 0.25);
+        `}
     }
 
     &__logo {

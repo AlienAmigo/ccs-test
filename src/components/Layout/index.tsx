@@ -5,6 +5,7 @@ import PageWrapper from 'components/PageWrapper';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
 import GlobalStyle from 'components/GlobalStyle';
+import UpButton from 'components/UIKit/UpButton';
 
 const Layout: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const Layout: React.FC = () => {
           <Outlet />
         </PageContentWrapper>
         <Footer />
+        <UpButton />
       </PageWrapper>
       <GlobalStyle />
     </>

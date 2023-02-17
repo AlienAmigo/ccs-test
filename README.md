@@ -1,4 +1,16 @@
-# Getting Started with Create React App
+# Тестовое задание Test Task for HTML Coder
+
+---
+репозиторий: 
+
+## Необходимые комментарии:
+
+1.  старался всё делать в строгом соответствии с ТЗ
+2.  добавил маршрутизацию, чтобы работало меню и прочие ссылки. Для некоторых адресов создал страницы, для некоторых - нет, чтобы показать реакцию приложения на неизвестный адрес
+3. в styled-components использовал как css-переменные, так и переменные из ts-объектов, чтобы показать, что могу и так, и так. Ну и, естественно, props.
+4. поскольку макет был только для desktop версии, c планшетным и мобильным разрешением поступал по своему усмотрению. Например, убрал во всплывающее меню часть навигации и строку поиска, добавил кнопку перемещения на верх страницы
+
+### Скрипты запуска / сброки / проверки
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,7 +21,7 @@ In the project directory, you can run:
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
