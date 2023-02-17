@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/216.35bf5803.chunk.js","mappings":"qIAMA,UAJkB,WAChB,OAAO,8BAAE,aACX,C","sources":["views/Locations/index.tsx"],"sourcesContent":["import React from 'react';\n\nconst Locations = () => {\n  return <>Locations</>;\n};\n\nexport default Locations;\n"],"names":[],"sourceRoot":""}

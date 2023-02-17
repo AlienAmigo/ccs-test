@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/295.67ff7025.chunk.js","mappings":"qIAMA,UAJiB,WACf,OAAO,8BAAE,YACX,C","sources":["views/Services/index.tsx"],"sourcesContent":["import React from 'react';\n\nconst Services = () => {\n  return <>Services</>;\n};\n\nexport default Services;\n"],"names":[],"sourceRoot":""}
