@@ -110,7 +110,7 @@ const Wrapper = styled.div`
     right: unset;
     width: max-content;
     height: max-content;
-    margin: 0 0 0 auto;
+    margin: 0 auto;
     padding: 0;
 
     & .client-nav {
@@ -133,6 +133,7 @@ const Wrapper = styled.div`
 
   @media screen and (${BREAKPOINTS.XS}) {
     margin-right: 10px;
+
     & .client-nav {
       &__list {
         gap: 6px;

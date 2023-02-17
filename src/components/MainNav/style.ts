@@ -28,8 +28,9 @@ const Wrapper = styled.nav<{ phoneMenu: boolean }>`
   @media screen and (${BREAKPOINTS.SM}) {
     ${({ phoneMenu }) =>
       css`
-        min-width: auto;
         position: relative;
+        min-width: auto;
+        margin: 0 auto;
 
         & .main-nav {
           &__wrapper {
