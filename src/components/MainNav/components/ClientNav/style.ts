@@ -76,9 +76,6 @@ const Wrapper = styled.div`
         color: var(--main-color);
 
         svg {
-          width: auto;
-          height: 100%;
-
           path {
             fill: var(--main-color);
           }
@@ -113,7 +110,7 @@ const Wrapper = styled.div`
     right: unset;
     width: max-content;
     height: max-content;
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 0;
 
     & .client-nav {
@@ -122,6 +119,7 @@ const Wrapper = styled.div`
       }
 
       &__icon {
+        max-width: 24px;
         height: 24px;
         margin-right: 6px;
       }
@@ -129,6 +127,19 @@ const Wrapper = styled.div`
       &__cart-counter {
         top: -5px;
         font-size: 0.6875rem;
+      }
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.XS}) {
+    margin-right: 10px;
+    & .client-nav {
+      &__list {
+        gap: 6px;
+      }
+
+      &__item-text {
+        display: none;
       }
     }
   }

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.button`
   display: none;
@@ -15,6 +16,7 @@ const Wrapper = styled.button`
       border: none;
       background-color: var(--transparent-color);
       cursor: pointer;
+      outline-color: var(--submain-color);
 
       svg {
         path {
@@ -33,6 +35,11 @@ const Wrapper = styled.button`
       }
     `
   )}
+
+  @media screen and (${BREAKPOINTS.XS}) {
+    margin-left: auto;
+    margin-right: var(--gap-sm);
+  }
 `;
 
 export default Wrapper;

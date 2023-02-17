@@ -88,9 +88,7 @@ const Wrapper = styled.footer`
         flex-wrap: nowrap;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 25px;
         width: max-content;
-        margin: 0 auto;
       }
     }
   }

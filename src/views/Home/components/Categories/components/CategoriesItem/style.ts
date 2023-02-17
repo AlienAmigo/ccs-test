@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     &__link {
       text-decoration: none;
       color: var(--text-color);
+      outline-color: var(--submain-color);
       ${MIXINS.TRANSITION('color')}
 
       &:hover {

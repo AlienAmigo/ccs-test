@@ -2,7 +2,7 @@
 
 // Breakpoints
 export const SCREEN = {
-  XS: `360px`,
+  XS: `480px`,
   SM: `768px`,
   LG: `1440px`
 };

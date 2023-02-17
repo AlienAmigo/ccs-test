@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { ANIMATE } from 'components/UIKit/Animate';
 import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.nav<{ phoneMenu: boolean }>`
@@ -52,6 +53,9 @@ const Wrapper = styled.nav<{ phoneMenu: boolean }>`
             padding: var(--gap-sm);
             overflow: auto;
             ${MIXINS.SCROLL_STYLE()}
+            box-shadow: 12px 0 8px 0 rgba(0, 0, 0, 0.2);
+            ${ANIMATE.SLIDE_IN_LEFT}
+            animation: slideInLeft 0.25s ease-in;
           }
         }
       `}

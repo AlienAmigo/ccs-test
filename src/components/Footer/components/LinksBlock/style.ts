@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { MIXINS } from 'components/UIKit/Mixins';
+import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.div`
   display: flex;
@@ -30,6 +31,26 @@ const Wrapper = styled.div`
 
       &:hover {
         color: var(--submain-color);
+      }
+    }
+  }
+
+  @media screen and (${BREAKPOINTS.SM}) {
+    & .links-block {
+      &__title {
+        margin: 1rem 0 0.5rem;
+        font-size: 1rem;
+      }
+
+      &__links-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      &__link,
+      &__link:visited {
+        font-size: 0.875rem;
       }
     }
   }

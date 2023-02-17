@@ -10,6 +10,7 @@ import Wrapper from './style';
 
 const Header: React.FC = () => {
   const [phoneMenu, setPhoneMenu] = useState(false);
+
   const togglePhoneMenu = () => {
     setPhoneMenu(!phoneMenu);
   };

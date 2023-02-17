@@ -11,6 +11,7 @@ const Wrapper = styled.div`
       justify-content: space-between;
       height: 132px;
       text-decoration: none;
+      text-align: center;
       color: var(--text-color);
       outline-color: var(--submain-color);
       ${MIXINS.TRANSITION('color')}

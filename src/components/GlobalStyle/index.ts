@@ -58,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
   
   /* 3. Screen  */
   
-  --screen-xs: 360px;
+  --screen-xs: 480px;
   --screen-sm: 768px;
   --screen-lg: 1440px;
   

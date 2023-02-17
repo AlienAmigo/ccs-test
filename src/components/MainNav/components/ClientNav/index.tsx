@@ -54,7 +54,7 @@ const ClientNav: React.FC<Props> = ({ cartItems }) => {
               {item.path === `${PATH.CART}` && (
                 <span className="client-nav__cart-counter">{cartItems}</span>
               )}
-              {item.title}
+              <div className="client-nav__item-text">{item.title}</div>
             </NavLink>
           </li>
         ))}

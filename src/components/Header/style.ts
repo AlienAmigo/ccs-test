@@ -19,6 +19,7 @@ const Wrapper = styled.header`
       padding: var(--gap-lg);
       background-color: var(--white-color);
     }
+
     &__logo {
       display: flex;
       align-items: center;
@@ -28,6 +29,7 @@ const Wrapper = styled.header`
       height: 45px;
       margin-top: 19px;
       opacity: 1;
+      outline-color: var(--submain-color);
       ${MIXINS.TRANSITION('opacity')}
 
       &:not(.active) {
@@ -57,9 +59,7 @@ const Wrapper = styled.header`
   @media screen and (${BREAKPOINTS.SM}) {
     & .header {
       &__wrapper {
-        //flex-direction: column;
         align-items: flex-start;
-        //justify-content: space-between;
         justify-content: flex-start;
         position: relative;
         width: var(--screen-sm);

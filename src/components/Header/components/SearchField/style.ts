@@ -74,7 +74,7 @@ const Wrapper = styled.div<{ phoneMenu?: boolean }>`
   @media screen and (${BREAKPOINTS.SM}) {
     display: ${({ phoneMenu }) => (!phoneMenu ? 'none' : 'flex')};
     margin: 0;
-    width: 300px;
+    max-width: 300px;
     height: 40px;
   }
 `;

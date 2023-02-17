@@ -31,6 +31,7 @@ const Wrapper = styled.div<{ place?: string }>`
       text-decoration: none;
       white-space: nowrap;
       color: var(--main-color);
+      outline-color: var(--submain-color);
       ${MIXINS.TRANSITION('color')}
       ${MIXINS.TRANSITION('border-color')}
     }
@@ -50,6 +51,7 @@ const Wrapper = styled.div<{ place?: string }>`
       }
     }
   }
+
   ${({ place }) =>
     place === 'footer' &&
     css`
@@ -90,6 +92,7 @@ const Wrapper = styled.div<{ place?: string }>`
       &__icon {
         width: 18px;
         height: 18px;
+        margin-right: 2px;
       }
     }
 
@@ -97,6 +100,15 @@ const Wrapper = styled.div<{ place?: string }>`
       place === 'footer' &&
       css`
         margin-top: 9px;
+        font-size: 0.875rem;
+      `}
+  }
+
+  @media screen and (${BREAKPOINTS.XXS}) {
+    ${({ place }) =>
+      place === 'header' &&
+      css`
+        display: none;
       `}
   }
 `;

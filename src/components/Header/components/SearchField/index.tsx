@@ -8,9 +8,14 @@ const onSubmit = (event: React.SyntheticEvent): void => {
 interface Props {
   className?: string;
   phoneMenu?: boolean;
+  togglePhoneMenu?: () => void;
 }
 
-const SearchField: React.FC<Props> = ({ className, phoneMenu }) => {
+const SearchField: React.FC<Props> = ({
+  className,
+  phoneMenu,
+  togglePhoneMenu
+}) => {
   return (
     <Wrapper className={className} phoneMenu={phoneMenu}>
       <form
@@ -25,7 +30,12 @@ const SearchField: React.FC<Props> = ({ className, phoneMenu }) => {
           placeholder="Product SKU, Name…"
           className="search-field__input"
         />
-        <input type="submit" value="" className="search-field__submit-btn" />
+        <input
+          type="submit"
+          value=""
+          className="search-field__submit-btn"
+          onClick={togglePhoneMenu}
+        />
       </form>
     </Wrapper>
   );
@@ -33,7 +43,8 @@ const SearchField: React.FC<Props> = ({ className, phoneMenu }) => {
 
 SearchField.defaultProps = {
   className: '',
-  phoneMenu: false
+  phoneMenu: false,
+  togglePhoneMenu: () => {}
 };
 
 export default SearchField;
