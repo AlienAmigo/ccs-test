@@ -1,6 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { BREAKPOINTS } from 'components/UIKit/Style';
-import { MIXINS } from 'components/UIKit/Mixins';
 
 const Wrapper = styled.main`
   display: flex;

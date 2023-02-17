@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import { MIXINS } from 'components/UIKit/Mixins';
-import { ANIMATE } from 'components/UIKit/Animate';
+import MIXINS from 'components/UIKit/Mixins';
+import ANIMATE from 'components/UIKit/Animate';
 import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.nav<{ phoneMenu: boolean }>`

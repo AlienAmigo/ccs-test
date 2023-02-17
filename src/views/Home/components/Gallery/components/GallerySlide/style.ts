@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MIXINS } from 'components/UIKit/Mixins';
+import MIXINS from 'components/UIKit/Mixins';
 import { BREAKPOINTS } from 'components/UIKit/Style';
 import fiberglassImg from './assets/fiberglass.png';
 

@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-export const MIXINS = {
+const MIXINS = {
   MEDIA: (size = 'desktop', code = css``) => {
     switch (size) {
       case 'phone':
@@ -203,3 +203,5 @@ export const MIXINS = {
     }
   `
 };
+
+export default MIXINS;

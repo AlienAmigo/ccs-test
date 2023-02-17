@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { BREAKPOINTS } from 'components/UIKit/Style';
-import { MIXINS } from 'components/UIKit/Mixins';
+import MIXINS from 'components/UIKit/Mixins';
 
 const Wrapper = styled.header`
   display: flex;

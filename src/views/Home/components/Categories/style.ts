@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MIXINS } from 'components/UIKit/Mixins';
+import MIXINS from 'components/UIKit/Mixins';
 import { BREAKPOINTS } from 'components/UIKit/Style';
 import prevImg from './assets/arrow-prev.svg';
 import nextImg from './assets/arrow-next.svg';

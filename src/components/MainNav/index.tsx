@@ -1,6 +1,5 @@
 import React from 'react';
 import SearchField from 'components/Header/components/SearchField';
-import * as events from 'events';
 import BasicNav from './components/BasicNav';
 import HelpNav from './components/HelpNav';
 import ClientNav from './components/ClientNav';
@@ -10,13 +9,6 @@ interface Props {
   phoneMenu: boolean;
   togglePhoneMenu: () => void;
 }
-
-const menuClick = (ev: React.SyntheticEvent, phoneMenu: boolean) => {
-  if (phoneMenu) {
-    ev.stopPropagation();
-    ev.nativeEvent.stopImmediatePropagation();
-  }
-};
 
 const MainNav: React.FC<Props> = ({ phoneMenu, togglePhoneMenu }) => {
   return (

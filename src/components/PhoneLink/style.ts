@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { MIXINS } from 'components/UIKit/Mixins';
+import MIXINS from 'components/UIKit/Mixins';
 import { BREAKPOINTS } from 'components/UIKit/Style';
 
 const Wrapper = styled.div<{ place?: string }>`

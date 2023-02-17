@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
 
-export const ANIMATE = {
+const ANIMATE = {
   GRADIENT_FLOW: css`
     @keyframes gradientFlow {
       0% {
@@ -4001,3 +4001,5 @@ export const ANIMATE = {
     /* stylelint-enable */
   `
 };
+
+export default ANIMATE;

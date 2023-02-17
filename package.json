@@ -1,7 +1,7 @@
 {
   "name": "ccs-test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@testing-library/jest-dom": "^5.14.1",
@@ -35,7 +35,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https,://alienamigo.github.io/ccs-test/",
   "eslintConfig": {
     "extends": [
       "react-app",
