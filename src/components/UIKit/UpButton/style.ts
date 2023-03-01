@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { BREAKPOINTS } from 'components/UIKit/Style';
-import MIXINS from 'components/UIKit/Mixins';
 import ANIMATE from 'components/UIKit/Animate';
 
 const Wrapper = styled.div<{ visible: boolean }>`
