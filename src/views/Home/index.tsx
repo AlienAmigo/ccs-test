@@ -8,6 +8,7 @@ import Wrapper from './style';
 const Home: React.FC = () => {
   return (
     <Wrapper>
+      <h1 hidden>Main Page</h1>
       <Gallery />
       <Categories />
       <Inventory />

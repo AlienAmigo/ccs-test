@@ -29,6 +29,7 @@ const Wrapper = styled.div`
       text-align: left;
       font-size: 2.875rem;
       line-height: 1.217em;
+      font-weight: 700;
       color: var(--white-color);
     }
 
@@ -42,7 +43,7 @@ const Wrapper = styled.div`
     &__btn {
       ${MIXINS.BUTTON_BASIC_STYLE()}
       position: absolute;
-      bottom: 526px;
+      top: 526px;
       left: 96px;
       width: 320px;
       height: 65px;

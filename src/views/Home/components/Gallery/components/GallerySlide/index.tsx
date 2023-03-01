@@ -7,14 +7,14 @@ interface Props {
 const GallerySlide: React.FC<Props> = ({ ind }) => {
   return (
     <Wrapper>
-      <h3 className="gallery-slide__title">
+      <p className="gallery-slide__title">
         Fiberglass and specialty metals are in stock across the United States
         {ind ? (
           <span className="gallery-slide__title-comment">{`slide ${ind}`}</span>
         ) : (
           ''
         )}
-      </h3>
+      </p>
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
       <a href="#" className="gallery-slide__btn">
         Shop Now
