@@ -2,7 +2,6 @@
   "name": "ccs-test",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://alienamigo.github.io/ccs-test/",
   "dependencies": {
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@testing-library/jest-dom": "^5.14.1",
